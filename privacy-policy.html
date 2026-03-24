@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Daily Meme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f0e8;
+      --surface: #faf7f2;
+      --border: #c8bfa8;
+      --border-dark: #9e9178;
+      --text: #1a1710;
+      --muted: #6b6352;
+      --accent: #2c3e6b;
+      --highlight-bg: #eee8d8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse at 20% 0%, rgba(180,165,130,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 100%, rgba(180,165,130,0.1) 0%, transparent 60%);
+      color: var(--text);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.75;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 720px;
+      padding: 0 28px 80px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      padding: 28px 0 0;
+    }
+
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--accent); }
+    nav a::before { content: '←'; font-style: normal; }
+
+    /* ── Header ── */
+    header {
+      padding: 40px 0 32px;
+      text-align: center;
+      border-bottom: 2px solid var(--border-dark);
+      margin-bottom: 48px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .logo-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .rule {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .rule::before, .rule::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-dark);
+    }
+
+    .rule-diamond {
+      width: 6px;
+      height: 6px;
+      background: var(--border-dark);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      line-height: 1.2;
+      color: var(--text);
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    /* ── Content ── */
+    section {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    section h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    section h3 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      font-style: italic;
+      margin: 20px 0 8px;
+    }
+
+    section p {
+      color: #3a3628;
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    ul li {
+      font-size: 1rem;
+      color: #3a3628;
+      padding-left: 22px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      font-size: 0.45rem;
+      color: var(--border-dark);
+      top: 0.55em;
+    }
+
+    .highlight-box {
+      background: var(--highlight-bg);
+      border-left: 3px solid var(--accent);
+      padding: 14px 18px;
+      margin-top: 16px;
+    }
+
+    .highlight-box p {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    strong.party {
+      font-weight: 600;
+      color: var(--text);
+      font-style: normal;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 2px solid var(--border-dark);
+      padding-top: 24px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer-rule {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .footer-rule::before, .footer-rule::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .footer-rule-diamond {
+      width: 5px;
+      height: 5px;
+      background: var(--border-dark);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <nav><a href="index.html">Back to Legal</a></nav>
+
+    <header>
+      <div class="logo-row">
+        <span style="font-size:20px;">🐕</span>
+        <span class="logo-text">Daily Meme</span>
+      </div>
+      <div class="rule"><div class="rule-diamond"></div></div>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: March 24, 2026</p>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+      <p>Daily Meme ("we", "our", or "us") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding your data.</p>
+    </section>
+
+    <section>
+      <h2>Information We Collect</h2>
+      <h3>Information you provide</h3>
+      <ul>
+        <li>Name and email address when you sign in with Apple or Google</li>
+        <li>Country selection if you choose to set it in Settings</li>
+      </ul>
+      <h3>Information collected automatically</h3>
+      <ul>
+        <li>Trivia answers and quiz results</li>
+        <li>Memes you save or like</li>
+        <li>Your daily streak activity</li>
+        <li>Push notification token (if you enable notifications)</li>
+        <li>Notification time preference</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Provide and operate the app, including your personalized meme feed, saved collection, and trivia history</li>
+        <li>Display your rank on the leaderboard (using your display name and country flag)</li>
+        <li>Send daily meme notifications at your chosen time (only if you enable this)</li>
+        <li>Calculate and maintain your streak and trivia points</li>
+        <li>Serve and measure advertising to support the free operation of the app</li>
+      </ul>
+      <div class="highlight-box">
+        <p>We do not sell your personal information to third parties.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Third-Party Services</h2>
+      <p><strong class="party">Supabase</strong> — We use Supabase to store your account data and app activity. Supabase processes data on our behalf under their own privacy policy.</p>
+      <p><strong class="party">Sign in with Apple / Google Sign-In</strong> — When you sign in using Apple or Google, we receive basic profile information (name and email) from those providers. Their respective privacy policies govern what data they collect during the sign-in process.</p>
+      <p><strong class="party">Expo / Push Notifications</strong> — We use Expo's push notification infrastructure to deliver daily reminders. Your push token is stored and only used to send notifications you have opted into.</p>
+    </section>
+
+    <section>
+      <h2>Advertising</h2>
+      <p>Daily Meme displays banner advertisements provided by Google AdMob. AdMob may use cookies, device identifiers, and similar technologies to serve ads that are relevant to you based on your interests and activity across other apps and websites.</p>
+      <p>On iOS, we request your permission through Apple's App Tracking Transparency framework before allowing personalized advertising. If you decline, you will still see ads but they will not be personalized.</p>
+      <p>If you are located in the European Union or European Economic Area, you will be asked to provide consent before personalized ads are shown. You may withdraw or change your consent at any time by contacting us.</p>
+      <p>To learn more about how Google uses data from apps that use its services, visit: <a href="https://google.com/policies/privacy/partners" target="_blank" rel="noopener" style="color: var(--accent);">google.com/policies/privacy/partners</a></p>
+    </section>
+
+    <section>
+      <h2>Data Retention</h2>
+      <p>We retain your account data for as long as your account is active. You can delete your account at any time from <strong class="party">Settings &rarr; Delete account</strong>, which permanently removes all your data including your profile, quiz history, saved memes, likes, and streaks.</p>
+    </section>
+
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>Daily Meme is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with their information, please contact us and we will delete it.</p>
+    </section>
+
+    <section>
+      <h2>Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Request correction of inaccurate data (you can edit your display name directly in Settings)</li>
+        <li>Delete your account and all associated data at any time via Settings</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. We will notify you of significant changes by updating the date at the top of this page.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>If you have any questions about this privacy policy, please contact us at: <a href="mailto:joshua9park@gmail.com" style="color: var(--accent);">joshua9park@gmail.com</a></p>
+    </section>
+
+    <footer>
+      <div class="footer-rule"><div class="footer-rule-diamond"></div></div>
+      <p>For inquiries, contact <a href="mailto:joshua9park@gmail.com">joshua9park@gmail.com</a></p>
+      <p>&copy; 2026 Daily Meme. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
